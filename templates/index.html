@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Predict Sentiment</title>
+   <link rel="stylesheet" type="text/css" href="/static/style.css">
+  </head>
+  <body>
+
+    <div id="container">
+    
+      <div class="pagetitle">
+        <h1>Predict Sentiment</h1>
+      </div>
+
+      <p>This webapp predicts if the sentence provided by the user is within given category</p>
+    
+      <div id="count">
+        <form id="process", method="post" action="{{ url_for('submitted_form') }}">
+
+          <!-- Enter text to process -->
+          <label for="input_text">Enter your sentence:</label> <input type="text" name="input_text"><br />
+          <input type ="submit" name="action" value="Predict">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
